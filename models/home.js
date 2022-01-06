@@ -6,7 +6,7 @@ const homeSchema = new mongoose.Schema({
   area: Number,
   front: Number,
   location: {
-    plot_number: Number,
+    plot_number: String,
     colony: String,
     pincode: Number,
     landmark: String,
