@@ -3,8 +3,9 @@ const res = require('express/lib/response');
 
 const router = express.Router();
 
-router.get('/', () => {
-  res.json('WORKING PERFECTLY FINE');
-});
+const { getHomes, addHome, updateHome } = require('./../controllers/home');
 
+router.get('/', getHomes);
+router.post('/', addHome);
+router.put('/', updateHome);
 module.exports = router;
